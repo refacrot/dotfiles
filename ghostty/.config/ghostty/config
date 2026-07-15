@@ -53,6 +53,7 @@ theme = Catppuccin Macchiato
 shell-integration = zsh
 font-size = 15
 macos-titlebar-style = tabs
+macos-option-as-alt = true
 maximize = true
 quit-after-last-window-closed = true
 # shell-integration-features=ssh-terminfo
