@@ -1,9 +1,11 @@
 [user]
   name = Dmitrii Iakovlev
   email = jakovlev.ds@gmail.com
-  signingKey = ~/.ssh/id_rsa.pub
+  signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtWQ8p73xzMsrh5ZbsXYyXRiZmuqHFlpjKBKwKrruO+hmhpDb8WfQK2JHMC8FONESPGGXK+T740a3s5sSB9pOe6MOC7szFAViXk/aNXmKcGb/GXXxxhlPWLpQQHKnNxxUtVtexkcbDvJOEzkhUMnCgTOXDhDvq2w6kjXz6sOHopSPQ2mPHU2rtjvWVHHsH6VfJoCiwTNXcVgZHWBFIot4H6Xh1alz54w6FhT29VC4vMyTVBam1Jg2yMAMk5ZdG9mBwmaRfggIMNTKwJhL76xQW8O6XuGUuLjPZPXgsL1rLmSBOZ89SkiDgazdzmj4M7X1fncQZ7yrITHCrVvvrBVUP
 [gpg]
   format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [color "status"]
   changed = yellow
 [commit]
