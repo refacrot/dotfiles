@@ -1,16 +1,14 @@
-prepare:
-	brew install stow
+.PHONY: install brew mise
 
-install:
-	stow -v -t ~ ghostty
-	stow -v -t ~ zellij
-	stow -v -t ~ zsh
-	stow -v -t ~ git
-	stow -v -t ~ nvim
+BREW_PREFIX := $(shell [ "$$(uname -m)" = arm64 ] && echo /opt/homebrew || echo /usr/local)
+export PATH := $(BREW_PREFIX)/bin:$(PATH)
 
-clean:
-	stow -vD -t ~ ghostty
-	stow -vD -t ~ zellij
-	stow -vD -t ~ zsh
-	stow -vD -t ~ git
-	stow -vD -t ~ nvim
+install: mise
+	mise bootstrap --yes
+
+brew: 
+	@command -v brew >/dev/null 2>&1 || \
+		NONINTERACTIVE=1 /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+mise: brew
+	brew install mise

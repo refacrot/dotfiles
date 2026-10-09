@@ -2,5 +2,5 @@
 
 ### Install:
 ```bash
-make install
+make 
 ```

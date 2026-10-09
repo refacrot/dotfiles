@@ -1,0 +1,32 @@
+[settings]
+  idiomatic_version_file_enable_tools = []
+  minimum_release_age = "24h"
+  minimum_release_age_excludes = ["claude-code", "codex"]
+  dotfiles.root = "~/.dotfiles"
+  dotfiles.default_mode = "symlink"
+
+[settings.ruby]
+  compile = false
+
+[dotfiles]
+  "~/.config/mise/config.toml" = "mise.toml"
+  "~/.config/nvim/init.lua" = "nvim/init.lua"
+  "~/.config/ghostty" = "ghostty"
+  "~/.gitconfig" = ".gitconfig"
+
+[bootstrap.brew]
+  adopt = true
+
+[bootstrap.packages]
+  # mise's own build has self-update disabled ("update mise the same way you
+  # installed it"), and that way is brew — so brew is what moves it.
+  "brew:mise" = "latest"
+  "brew-cask:chatgpt" = "latest"
+
+[tasks.upgrade]
+  description = "update mise tools and Homebrew installed packages"
+  run = [
+    "mise upgrade",
+    "brew update",
+    "brew upgrade -y"
+  ]
