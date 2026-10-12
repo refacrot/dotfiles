@@ -5,10 +5,21 @@
   dotfiles.root = "~/.dotfiles"
   dotfiles.default_mode = "symlink"
 
+[tools]
+  ruby = "latest"
+  go = "latest"
+  # Ai
+  codex = "latest"
+
+  atuin = "latest"
+
 [settings.ruby]
   compile = false
 
 [dotfiles]
+  "~/.config/zsh/rc.zsh" = "zsh/rc.zsh"
+  "~/.zshrc/rc" = { line = 'source ~/.config/zsh/rc.zsh' }
+
   "~/.config/mise/config.toml" = "mise.toml"
   "~/.config/nvim/init.lua" = "nvim/init.lua"
   "~/.config/ghostty" = "ghostty"
