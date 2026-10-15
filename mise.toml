@@ -33,11 +33,13 @@
   # installed it"), and that way is brew — so brew is what moves it.
   "brew:mise" = "latest"
   "brew-cask:chatgpt" = "latest"
+  "brew-cask:1password-cli" = "latest"
 
 [tasks.upgrade]
   description = "update mise tools and Homebrew installed packages"
   run = [
     "mise upgrade",
     "brew update",
-    "brew upgrade -y"
+    "brew upgrade -y",
+    "mise bootstrap packages upgrade --yes"
   ]
