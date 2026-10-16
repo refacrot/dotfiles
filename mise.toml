@@ -1,17 +1,15 @@
 [settings]
   idiomatic_version_file_enable_tools = []
   minimum_release_age = "24h"
-  minimum_release_age_excludes = ["claude-code", "codex"]
+  # minimum_release_age_excludes = ["claude-code", "codex"]
   dotfiles.root = "~/.dotfiles"
   dotfiles.default_mode = "symlink"
 
 [tools]
   ruby = "latest"
   go = "latest"
-  # Ai
-  codex = "latest"
 
-  atuin = "latest"
+  lefthook = "latest"
 
 [settings.ruby]
   compile = false
@@ -32,8 +30,24 @@
   # mise's own build has self-update disabled ("update mise the same way you
   # installed it"), and that way is brew — so brew is what moves it.
   "brew:mise" = "latest"
+  "brew:lnav" = "latest"
+  "brew:herdr" = "latest"
+  "brew:atuin" = "latest"
+  "brew:neovim" = "latest"
+  "brew:lazygit" = "latest"
+
+  # Ai
+  "brew:opencode" = "latest"
+  "brew-cask:codex" = "latest"
   "brew-cask:chatgpt" = "latest"
+  "brew-cask:claude-code@latest" = "latest"
+
+  "brew-cask:ghostty" = "latest"
+  "brew-cask:1password" = "latest"
+  "brew-cask:google-chrome" = "latest"
   "brew-cask:1password-cli" = "latest"
+  "brew-cask:docker-desktop" = "latest"
+  "brew-cask:visual-studio-code" = "latest"
 
 [tasks.upgrade]
   description = "update mise tools and Homebrew installed packages"
