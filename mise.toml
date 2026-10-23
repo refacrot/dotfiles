@@ -8,6 +8,7 @@
 [tools]
   ruby = "latest"
   go = "latest"
+  node = "latest"
 
   lefthook = "latest"
 
@@ -30,6 +31,7 @@
   # mise's own build has self-update disabled ("update mise the same way you
   # installed it"), and that way is brew — so brew is what moves it.
   "brew:mise" = "latest"
+  "brew:git" = "latest"
   "brew:lnav" = "latest"
   "brew:herdr" = "latest"
   "brew:atuin" = "latest"
@@ -40,6 +42,7 @@
   "brew:opencode" = "latest"
   "brew-cask:codex" = "latest"
   "brew-cask:chatgpt" = "latest"
+  "brew-cask:claude" = "latest"
   "brew-cask:claude-code@latest" = "latest"
 
   "brew-cask:ghostty" = "latest"
